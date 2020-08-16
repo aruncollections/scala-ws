@@ -5,14 +5,38 @@ public class QuickCheckJava {
     public static void main(String[] ar) {
         // System.out.println(lengthOfLongestSubstring("13234567"));
         //printMissingNumber(new int[]{1,2,4},4);
+        //System.out.println(removeDuplicates(Arrays.asList(new Integer[]{1, 2, 2, 3, 3, 4})));
+    }
 
-        Data s1 = new Sub();
-        s1.m(1);
+    public static int removeDuplicates(List<Integer> list) {
+        int writeIndex = 1;
 
-        System.out.println("----");
+        for (int i = 1; i < list.size(); ++i) {
+            if (!list.get(writeIndex - 1).equals(list.get(i))) {
+                list.set(writeIndex++, list.get(i));
+;            }
+        }
 
-        Sub s2 = new Sub();
-        s2.m(1);
+
+        list.forEach(System.out::print);
+        System.out.println("---");
+        return writeIndex;
+    }
+
+    public static int removeDuplicates2(int[] nums) {
+        if (nums.length == 0) return 0;
+        int i = 1;
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[j] != nums[i - 1]) {
+                nums[i++] = nums[j];
+                nums[i] = nums[j];
+            }
+        }
+
+        for (int x = 0; x < nums.length; x++)
+            System.out.print(nums[x]);
+
+        return i + 1;
     }
 
     public static int negate(int a) {
@@ -45,11 +69,10 @@ public class QuickCheckJava {
         while (i < n && j < n) {
             // try to extend the range [i, j]
             System.out.println(i + ", " + j);
-            if (!set.contains(s.charAt(j))){
+            if (!set.contains(s.charAt(j))) {
                 set.add(s.charAt(j++));
                 ans = Math.max(ans, j - i);
-            }
-            else {
+            } else {
                 set.remove(s.charAt(i++));
             }
         }
@@ -58,7 +81,7 @@ public class QuickCheckJava {
 
 
     static void permutation(String perm, String word) {
-        System.out.println("perm: " + perm +", word: " + word);
+        System.out.println("perm: " + perm + ", word: " + word);
 
         if (word.isEmpty()) {
             System.out.println(perm + word);
@@ -125,7 +148,7 @@ class Data {
     final String fin;
 
     static {
-        System.out.println("static {}" );
+        System.out.println("static {}");
     }
 
     {
@@ -164,7 +187,7 @@ class Data {
     }
 
     public String toString() {
-     return name;
+        return name;
     }
 
 
