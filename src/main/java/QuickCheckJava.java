@@ -4,10 +4,10 @@ public class QuickCheckJava {
 
     public static void main(String[] ar) {
         // System.out.println(lengthOfLongestSubstring("13234567"));
-        //printMissingNumber(new int[]{1,2,4},4);
+        printMissingNumber(new int[]{1,5},5);
         //System.out.println(removeDuplicates(Arrays.asList(new Integer[]{1, 2, 2, 3, 3, 4})));
-        System.out.println(decode("BB"));
-        System.out.println(decode("ZA"));
+        //System.out.println(decode("BB"));
+        //System.out.println(decode("ZA"));
     }
 
     static int decode(String column) {
