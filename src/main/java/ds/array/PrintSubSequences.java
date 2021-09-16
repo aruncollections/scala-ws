@@ -3,11 +3,11 @@ package ds.array;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrintAllSubArrays {
+public class PrintSubSequences {
 
     public static void main(String[] args) {
         int[] arrA = {1, 2, 3, 4};
-        new PrintAllSubArrays().printSubArrays2(arrA);
+        new PrintSubSequences().printSubArrays2(arrA);
     }
 
     public void printSubArrays2(int[] arrA) {
